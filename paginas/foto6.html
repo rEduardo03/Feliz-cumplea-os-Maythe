@@ -21,7 +21,7 @@
             position: relative;
         }
 
-        /* --- Fondo Animado para Páginas de Detalle --- */
+        /* --- Fondo Animado --- */
         .animated-bg {
             position: absolute;
             inset: 0;
@@ -37,7 +37,7 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* --- Contenedor principal para la foto y el mensaje --- */
+        /* --- Contenedor principal --- */
         .content-wrapper {
             display: flex;
             justify-content: center;
@@ -77,7 +77,6 @@
             transition: transform 0.3s ease;
         }
 
-        /* Efecto de brillo para la foto */
         .photo-container::before {
             content: '';
             position: absolute;
@@ -97,7 +96,7 @@
         }
 
         .photo-container:hover img {
-            transform: scale(1.05); /* Zoom */
+            transform: scale(1.05);
         }
 
         .message-box {
@@ -168,40 +167,38 @@
             left: 120%;
         }
 
-        /* Logo de la carta en la esquina inferior derecha */
+        /* Logo de la carta */
         .card-logo {
-            position: fixed; /* Posición fija para que siempre esté en la esquina */
-            bottom: 30px; /* Separación del borde inferior */
-            right: 30px; /* Separación del borde derecho */
-            width: 70px; /* Tamaño del logo */
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
             height: 70px;
-            border-radius: 50%; /* Para que sea circular */
+            border-radius: 50%;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer; /* Indica que es un elemento clicable */
-            z-index: 10; /* Asegura que esté por encima de otros elementos */
-            background-color: rgba(255, 255, 255, 0.2); /* Fondo sutil para la carta */
+            cursor: pointer;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.2);
             display: flex;
             justify-content: center;
             align-items: center;
             animation: fadeIn 0.8s ease-out forwards;
-            animation-delay: 2s; /* Aparece un poco después del contenido */
+            animation-delay: 2s;
         }
 
         .card-logo:hover {
-            transform: scale(1.2) rotate(5deg); /* Zoom y ligera rotación al pasar el cursor */
+            transform: scale(1.2) rotate(5deg);
             box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5);
         }
 
         .card-logo img {
-            width: 80%; /* Ajusta el tamaño de la imagen dentro del círculo */
+            width: 80%;
             height: 80%;
             object-fit: contain;
         }
 
-
-        /* Media queries para pantallas más pequeñas */
         @media (max-width: 768px) {
             .content-wrapper {
                 flex-direction: column;
@@ -238,7 +235,8 @@
 
     <div class="content-wrapper">
         <div class="photo-container">
-            <img src="/img/foto66.jpg" alt="Foto de Cumpleaños">
+            <!-- 🔥 Quité la / al inicio -->
+            <img src="img/foto66.jpg" alt="Foto de Cumpleaños">
         </div>
 
         <div class="message-box">
@@ -259,11 +257,13 @@
         </div>
     </div>
 
+    <!-- 🔥 También quité la / al inicio -->
     <a href="carta.html" class="card-logo">
-        <img src="/img/carta.png" alt="Abrir carta">
+        <img src="img/carta.png" alt="Abrir carta">
     </a>
 
-    <a href="/index.html" class="back-button">Volver al inicio</a>
+    <!-- 🔥 Igual aquí, sin / -->
+    <a href="index.html" class="back-button">Volver al inicio</a>
 
 </body>
 </html>
